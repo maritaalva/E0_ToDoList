@@ -8,18 +8,18 @@ document.querySelector('#add_button').onclick = function(){
           <span id="taskname">
             ${document.querySelector('#add_task input').value}
             </span>
-            <button class="delete">xx</button>
+            <button class="delete_button">xx</button>
             </div>
         `;
         
 
-let current_tasks = document.querySelectorAll(".delete");
+let current_tasks = document.querySelectorAll(".delete_button");
 for(let i=0; i<current_tasks.length; i++){
     current_tasks[i].onclick= function(){
         this.parentNode.remove();
     }
 }
 
-
+    document.querySelector("#add_task input").value = "";
      }
 }
