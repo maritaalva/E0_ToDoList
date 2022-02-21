@@ -12,7 +12,60 @@
   background-size: cover;
 }
 
+@font-face {
+  font-family: 'FK Raster';
+  src: url(../fonts/FKRasterGrotesk.woff) format('woff'),
+       url(../fonts/FKRasterGrotesk.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: 'Aeonik';
+  src: url(../fonts/Aeonik.woff) format('woff'),
+       url(../fonts/Aeonik.woff2) format('woff2');
+  font-weight: 400;
+  font-style: normal;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+
+}
+h2{
+  font-family: 'FK Raster';
+  letter-spacing: 0.1rem;
+}
+#heaven_title{
+
+    color: rgb(255, 255, 255);
+    margin-top: 2rem;
+}
+#heaven_logo{
+    margin-right: 2rem;
+    width: 5rem;
+    height:5rem;
+}
+.floating {  
+    animation-name: floating;
+    animation-duration: 3s;
+    animation-iteration-count: infinite;
+    animation-timing-function: ease-in-out;
+
+}
+
+@keyframes floating {
+    from { transform: translate(0,  0px); }
+    65%  { transform: translate(0, 12px); }
+    to   { transform: translate(0, -0px); }    
+}
 .main_container{
+      display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
     width: 40%;
     min-width: 450px;
     position: absolute;
@@ -20,6 +73,7 @@
     top: 50%;
     left: 50%;
     padding: 30px 40px;
+
 }
 
 #add_task {
@@ -27,28 +81,48 @@
   
     padding: 30px 20px;
     justify-content: center;
+    padding: 30px 20px;
+  /* display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  top: 50%;
+  left: 50%;
+  position: absolute;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%); */
           
 }
 
 #textbox{
+  padding-left: 1rem;
+  font-family: 'Aeonik';
   margin-right: 0.5rem;
   color: white;
   background-color: none;
   border-radius: 60px;
   border-style: none;
-  height: 3rem;
+  height: 2.5rem;
   width: auto;
 /* From https://css.glass */
-background: rgba(74, 101, 255, 0.123);
+background: rgba(74, 101, 255, 0.048);
 border-radius: 60px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(8.3px);
 -webkit-backdrop-filter: blur(8.3px);
-border: 1px solid rgba(255, 255, 255, 0.95);
+border: 0.25px solid rgba(255, 255, 255, 0.95);
+}
+input[type="text"]{
+  font-family: 'Aeonik';
+  color: white;
+}
+
+::-webkit-input-placeholder{
+  color: white;
 }
 
 #element_list{
- position: relative;
+    width: 100%;
   list-style: none;
   height: fit-content;
   width: fit-content;
@@ -58,23 +132,24 @@ border-radius: 16px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
 backdrop-filter: blur(5.4px);
 -webkit-backdrop-filter: blur(5.4px);
-border: 1px solid rgba(255, 255, 255, 0.95);
+border: 0.25px solid rgba(255, 255, 255, 0.95);
 
 }
 
 #add_button{
+  font-family: 'Aeonik';
   color: white;
   border-radius: 60px;
   border-style: none;
-  height: 3rem;
+  height: 2.5rem;
   width: 4rem;
 /* From https://css.glass */
-background: rgba(87, 111, 245, 0.096);
+background:rgba(74, 101, 255, 0.212);
 border-radius: 60px;
 box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-backdrop-filter: blur(2px);
+backdrop-filter: blur(8.3px);
 -webkit-backdrop-filter: blur(8.3px);
-border: 1px solid rgba(255, 255, 255, 0.95);
+border: 0.25px solid rgba(255, 255, 255, 0.95);
 }
 
 .task{
@@ -85,3 +160,4 @@ border: 1px solid rgba(255, 255, 255, 0.95);
     align-items: center;
     justify-content: space-between;
 }
+
