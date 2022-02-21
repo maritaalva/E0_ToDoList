@@ -24,8 +24,9 @@
 
 #add_task {
     position: relative;
-    background-color: #ffffff59;
+  
     padding: 30px 20px;
+    justify-content: center;
           
 }
 
