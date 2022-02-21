@@ -1,73 +1,180 @@
-#heaven_bg
-  min-height: 100%
-  width: auto
-  height: auto
-  position: fixed
-  top: 50%
-  left: 50%
-  -webkit-transform: translateX(-50%) translateY(-50%)
-  transform: translateX(-50%) translateY(-50%)
-  z-index: -1
-  background-size: cover
+#heaven_bg {
+  min-width: 100%;
+  min-height: 100%;
+  width: auto;
+  height: auto;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  -webkit-transform: translateX(-50%) translateY(-50%);
+  transform: translateX(-50%) translateY(-50%);
+  z-index: -1;
+  background-size: cover;
+}
 
-.main_container
-  width: 40%
-  min-width: 450px
-  position: absolute
-  transform: translate(-50%, -50%)
-  top: 50%
-  left: 50%
-  padding: 30px 40px
+@font-face {
+  font-family: 'FK Raster';
+  src: url(../fonts/FKRasterGrotesk.woff) format("woff"), url(../fonts/FKRasterGrotesk.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 
-#add_task
-  position: relative
-  background-color: #ffffff59
-  padding: 30px 20px
+@font-face {
+  font-family: 'Aeonik';
+  src: url(../fonts/Aeonik.woff) format("woff"), url(../fonts/Aeonik.woff2) format("woff2");
+  font-weight: 400;
+  font-style: normal;
+}
 
-#textbox
-  margin-right: 0.5rem
-  color: white
-  background-color: none
-  border-radius: 60px
-  border-style: none
-  height: 3rem
-  width: auto
-  background: rgba(74, 101, 255, 0.123)
-  border-radius: 60px
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
-  backdrop-filter: blur(8.3px)
-  -webkit-backdrop-filter: blur(8.3px)
-  border: 1px solid rgba(255, 255, 255, 0.95)
+header {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
 
-#element_list
-  position: relative
-  list-style: none
-  height: fit-content
-  width: fit-content
-  background: rgba(255, 255, 255, 0.38)
-  border-radius: 16px
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
-  backdrop-filter: blur(5.4px)
-  -webkit-backdrop-filter: blur(5.4px)
-  border: 1px solid rgba(255, 255, 255, 0.95)
+h2 {
+  font-family: 'FK Raster';
+  letter-spacing: 0.1rem;
+}
 
-#add_button
-  color: white
-  border-radius: 60px
-  border-style: none
-  height: 3rem
-  width: 4rem
-  background: rgba(87, 111, 245, 0.096)
-  border-radius: 60px
-  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1)
-  backdrop-filter: blur(2px)
-  -webkit-backdrop-filter: blur(8.3px)
-  border: 1px solid rgba(255, 255, 255, 0.95)
+#heaven_title {
+  color: rgb(255, 255, 255);
+  margin-top: 2rem;
+}
 
-.task
-  height: 50px
-  padding: 5px 10px
-  margin-top: 10px
-  display: flex
-  align-items: center
-  justify-content: space-between
+#heaven_logo {
+  margin-right: 2rem;
+  width: 5rem;
+  height: 5rem;
+}
+
+.floating {
+  animation-name: floating;
+  animation-duration: 3s;
+  animation-iteration-count: infinite;
+  animation-timing-function: ease-in-out;
+}
+
+@keyframes floating {
+  from {
+    transform: translate(0, 0px);
+  }
+
+  65% {
+    transform: translate(0, 12px);
+  }
+
+  to {
+    transform: translate(0, 0px);
+  }
+}
+
+.main_container {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  width: 40%;
+  min-width: 450px;
+  position: absolute;
+  transform: translate(-50%, -50%);
+  top: 50%;
+  left: 50%;
+  padding: 30px 40px;
+}
+
+#add_task {
+  position: relative;
+  width: 20rem;
+  padding: 30px 20px;
+  justify-content: center;
+  padding: 30px 20px;
+  display: flex;
+  flex-direction: row;
+}
+
+#textbox {
+  padding-left: 1rem;
+  font-family: 'Aeonik';
+  margin-right: 0.5rem;
+  color: white;
+  background-color: none;
+  border-radius: 60px;
+  border-style: none;
+  height: 2.5rem;
+  width: 100%;
+  background: #41417c31;
+  border-radius: 60px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.11);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 0.25px solid rgba(255, 255, 255, 0.95);
+}
+
+input[type="text"] {
+  font-family: 'Aeonik';
+  color: white;
+}
+
+::-webkit-input-placeholder {
+  color: white;
+}
+
+#element_list {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  width: 100%;
+  list-style: none;
+  height: 2.5rem;
+  width: fit-content;
+}
+
+#add_button {
+  font-family: 'Aeonik';
+  color: white;
+  border-radius: 60px;
+  border-style: none;
+  height: 2.5rem;
+  width: 4rem;
+
+  /* From https://css.glass */
+  background: #41417c34;
+  border-radius: 60px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(8.3px);
+  -webkit-backdrop-filter: blur(8.3px);
+  border: 0.25px solid rgba(255, 255, 255, 0.95);
+}
+
+.task {
+  padding: 0px 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(255, 255, 255, 0.055);
+  margin: 0.3rem;
+  border-radius: 16px;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(5.4px);
+  -webkit-backdrop-filter: blur(5.4px);
+  border: 0.25px solid rgba(255, 255, 255, 0.95);
+}
+
+#delete_button_svg {
+  width: 1.3rem;
+  height: 1.3rem;
+}
+
+.delete_button {
+  background-color: rgba(255, 255, 255, 0);
+  border-style: none;
+  height: 2.5rem;
+  width: 4rem;
+}
+
+#taskname {
+  font-family: 'Aeonik';
+  color: #41417C;
+}
