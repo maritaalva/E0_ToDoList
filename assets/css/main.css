@@ -12,11 +12,67 @@
   background-size: cover;
 }
 
-.main_container {
+.main_container{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#add_task {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
   top: 50%;
   left: 50%;
   position: absolute;
   -webkit-transform: translate(-50%, -50%);
           transform: translate(-50%, -50%);
+          
 }
-/*# sourceMappingURL=main.css.map */
+
+#textbox{
+  margin-right: 0.5rem;
+  color: white;
+  background-color: none;
+  border-radius: 60px;
+  border-style: none;
+  height: 3rem;
+  width: auto;
+/* From https://css.glass */
+background: rgba(74, 101, 255, 0.795);
+border-radius: 60px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.3px);
+-webkit-backdrop-filter: blur(8.3px);
+border: 1px solid rgba(255, 255, 255, 0.95);
+}
+
+#element_list{
+  list-style: none;
+  height: fit-content;
+  width: fit-content;
+  /* From https://css.glass */
+background: rgba(255, 255, 255, 0.38);
+border-radius: 16px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(5.4px);
+-webkit-backdrop-filter: blur(5.4px);
+border: 1px solid rgba(255, 255, 255, 0.95);
+
+}
+
+#add_button{
+  color: white;
+  border-radius: 60px;
+  border-style: none;
+  height: 3rem;
+  width: 4rem;
+/* From https://css.glass */
+background: rgba(74, 101, 255, 0.795);
+border-radius: 60px;
+box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+backdrop-filter: blur(8.3px);
+-webkit-backdrop-filter: blur(8.3px);
+border: 1px solid rgba(255, 255, 255, 0.95);
