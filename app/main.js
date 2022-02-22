@@ -1,3 +1,6 @@
+window.onload= function(){
+
+
 document.querySelector('#add_button').onclick = function(){
     if(document.querySelector('#add_task input').value.length == 0){
         alert("C'mon you haven't die yet! Write something ʕ╥ᴥ╥  ʔ")
@@ -24,4 +27,4 @@ for(let i=0; i<current_tasks.length; i++){
 
     document.querySelector("#add_task input").value = "";
      }
-}
+}}

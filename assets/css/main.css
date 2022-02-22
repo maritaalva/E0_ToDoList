@@ -178,7 +178,7 @@ input[type="text"] {
           justify-content: center;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-  width: 100%;
+  width: 40rem;
   list-style: none;
   height: 2.5rem;
   width: -webkit-fit-content;
@@ -241,3 +241,24 @@ input[type="text"] {
   color: #41417C;
 }
 /*# sourceMappingURL=main.css.map */
+
+@media screen and (max-width:375px){
+  .main_container{
+    top:30%;
+  }
+  #heaven_logo{
+    margin-right: 1rem;
+    width: 3rem;
+    height: 3rem;
+  }
+  #heaven_title{
+    margin-top: 1rem;
+  }
+  h2{
+    font-size: 1.25rem;
+    letter-spacing: 0.05rem;
+  }
+  #element_list{
+    width: 20rem;
+  }
+}
