@@ -12,7 +12,7 @@ document.querySelector('#add_button').onclick = function(){
             ${document.querySelector('#add_task input').value}
             </span>
             <button class="delete_button">
-            <img src="../assets/img/delete_button.svg" id="delete_button_svg" alt="svg for delete button">
+            <img src="assets/img/delete_button.svg" id="delete_button_svg" alt="svg for delete button">
             </button>
             </div>
         `;
